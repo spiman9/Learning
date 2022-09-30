@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Perfectoo!!! Habibi Welcome to Week Show</h1>
+        <p>Whats Up Guys! hope You are well on the other side</p>
+        <strong>Todays Week Day is : <span id="day"></span></strong>
+    </div>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-size: 50px;
+        }
+
+        .container {
+            color: white;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('https://image.shutterstock.com/image-vector/week-concept-colorful-vector-symbols-260nw-175520912.jpg');
+            background-size: cover;
+            opacity: 01;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        h1 {
+            background-color: grey;
+            opacity: 0.7;
+        }
+
+        p {
+            background-color: yellow;
+            opacity: 0.5;
+            color: black;
+        }
+
+        span {
+            color: red;
+            background-color: black;
+        }
+
+
+        strong {
+            background-color: red;
+            opacity: 0.9;
+        }
+
+        .colorchange {
+            color: black;
+        }
+    </style>
+    <script>
+        setInterval(() => {
+            a = new Date();
+            let dm = a.toLocaleDateString();
+            let y = a.getDay();
+            let ans;
+            if (y == 0) {
+                ans = 'Sunday';
+            } else if (y == 1) {
+                ans = 'Monday';
+            } else if (y == 2) {
+                ans = 'Tuesday';
+            } else if (y == 3) {
+                ans = 'Wednesday';
+            } else if (y == 4) {
+                ans = 'Thursday';
+            } else if (y == 5) {
+                ans = 'Friday';
+            } else if (y == 6) {
+                ans = 'Saturday';
+            }
+            document.getElementById('day').innerHTML = ans;
+        }, 1000);
+
+    </script>
+</body>
+
+</html>
